@@ -1,0 +1,28 @@
+﻿<Window x:Class="wpfapp.AuthWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wpfapp"
+        mc:Ignorable="d"
+                Title="Приложение для пользователя" Height="600" Width="800">
+    <Grid Background="#DCCEB4">
+        <Border MinWidth="400" Margin="15" Background="White" VerticalAlignment="Center" Padding="40" MaxWidth="550" CornerRadius="20">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="30" Color="LightGray" ShadowDepth="0"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Окно авторизации" FontSize="30" FontWeight="Bold" Margin="0 0 0 20"/>
+                <Grid Margin="0 0 0 20">
+                    <Button HorizontalAlignment="Left" Width="120" Click="Button_Window_Main_Click"  Content="Зарегистрироваться" />
+                    <Button HorizontalAlignment="Right" Width="150" Content="Войти без авторизации" />
+                </Grid>
+                <Label>Введите логин</Label>
+                <TextBox x:Name="TextBoxLogin" Margin="0 2"/>
+                <Label>Введите пароль</Label>
+                <PasswordBox x:Name="PasswordBoxx" Margin="0 2"/>
+                <Button Content="Войти в кабинет" Margin="0 20" Click="Button_Auth_Click" />
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
